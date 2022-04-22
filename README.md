@@ -1,4 +1,4 @@
-# ST2-A3-Code
+# Read Me
 
 ## How to use Github?
 repo: repository
