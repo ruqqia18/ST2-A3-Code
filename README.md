@@ -21,3 +21,4 @@ remote: To create a merge request for my-new-branch, visit:
 remote:   https://gitlab.example.com/my-group/my-project/merge_requests/new?merge_request%5Bsource_branch%5D=my-new-branch
 //This link is dynamic. 
 16. So share this link in the slack channel. So, that everyone can accept this request on their local machines. The changes will then be reflected everywhere likewise.
+17. **Remember:** You can raise issue, whenever you face any issue while working on github or any other part of the project.
