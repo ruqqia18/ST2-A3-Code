@@ -22,3 +22,14 @@ remote:   https://gitlab.example.com/my-group/my-project/merge_requests/new?merg
 //This link is dynamic. 
 16. So share this link in the slack channel. So, that everyone can accept this request on their local machines. The changes will then be reflected everywhere likewise.
 17. **Remember:** You can raise issue, whenever you face any issue while working on github or any other part of the project.
+
+## How to run test on nightwatch framework?
+1. Navigate into the repo directory using vscode.
+2. run this on vscode terminal: npm install chromedriver --save-dev
+3. run this also on vscode terminal: npm install selenium
+4. Use this: npx nightwatch tests/FirstTest.js
+5. It will ask you install nightwatch.
+6. Hit enter.
+7. After installation of nightwatch,
+8. again run npx nightwatch tests/FirstTest.js
+9. It will begin to run the test.
