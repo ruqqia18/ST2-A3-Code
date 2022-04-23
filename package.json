@@ -1,0 +1,22 @@
+{
+  "name": "reactionstorefront_auto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruqqia18/ST2-A3-Code.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ruqqia18/ST2-A3-Code/issues"
+  },
+  "homepage": "https://github.com/ruqqia18/ST2-A3-Code#readme",
+  "devDependencies": {
+    "chromedriver": "^100.0.0"
+  }
+}
