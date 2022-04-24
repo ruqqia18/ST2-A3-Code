@@ -1,14 +1,18 @@
 module.exports = {
     'view Cart Test (Test Case 1)' : function (browser) {
-      const viewCartPage = browser.page.viewCartPageTC1();
-      const viewCartPageResults=browser.page.viewCartPageResultsTC1();
+      const homePage = browser.page.homePage();
+      const cartPage=browser.page.cartPage();
   
-      viewCartPage
+      homePage
         .navigate()
         .homePageAndCart();
-      viewCartPageResults
+      cartPage
         .verifyViewCartDisplayed();
       browser
         .end();
     }
   };  
+  /*
+This test case checks whether the cart button is pressed or not.
+and it is directed to the new page or not 
+  */
