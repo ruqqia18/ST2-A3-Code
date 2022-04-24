@@ -12,7 +12,7 @@ repo: repository
 8. Two basic commands are used frequently: git push (means you are adding changes in the repo, you are added in) and git pull (means you are getting changes from the repo). Git pull is also called as merge request. 
 9. Here's how push and merge request works:
 10. Run these commands:
-11. git checkout -b my-new-branch //here you can name the branch by your name
+11. git checkout -b my-new-branch //here you can name the branch by your name, -b will be used when you are creating branch for the first time
 12. git add .
 13. git commit -m "My commit message" //The message can be related to the change you made.
 14. git push origin my-new-branch
@@ -25,11 +25,9 @@ remote:   https://gitlab.example.com/my-group/my-project/merge_requests/new?merg
 
 ## How to run test on nightwatch framework?
 1. Navigate into the repo directory using vscode.
-2. run this on vscode terminal: npm install chromedriver --save-dev
-3. run this also on vscode terminal: npm install selenium
-4. Use this: npx nightwatch tests/FirstTest.js
-5. It will ask you install nightwatch.
-6. Hit enter.
-7. After installation of nightwatch,
-8. again run npx nightwatch tests/FirstTest.js
-9. It will begin to run the test.
+2. Enter this: npx nightwatch tests/FirstTest.js
+3. It will ask you install nightwatch.
+4. Hit enter.
+5. After installation of nightwatch,
+6. again run npx nightwatch tests/FirstTest.js
+7. It will begin to run the test.

@@ -1,5 +1,5 @@
 module.exports = {
-  'Demo test Google' : function (browser) {
+  'Demo test Reaction Store Front' : function (browser) {
     const searchPage = browser.page.searchPage();
     const searchResults = browser.page.searchResults();
 
