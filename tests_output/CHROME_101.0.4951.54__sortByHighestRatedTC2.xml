@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="1">
+
+  <testsuite name="sortByHighestRatedTC2"
+    errors="0" failures="0" hostname="" id="" package="sortByHighestRatedTC2" skipped="0"
+    tests="1" time="4.765" timestamp="">
+  
+    <testcase name="sort By Highest Rated Test (Test Case 2)" classname="sortByHighestRatedTC2" time="4.765" assertions="11">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>

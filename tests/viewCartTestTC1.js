@@ -14,5 +14,5 @@ module.exports = {
   };  
   /*
 This test case checks whether the cart button is pressed or not.
-and it is directed to the new page or not 
+and is it directed to the new page or not?
   */
