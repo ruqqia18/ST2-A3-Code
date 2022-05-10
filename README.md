@@ -23,6 +23,12 @@ remote:   https://gitlab.example.com/my-group/my-project/merge_requests/new?merg
 16. So share this link in the slack channel. So, that everyone can accept this request on their local machines. The changes will then be reflected everywhere likewise.
 17. **Remember:** You can raise issue, whenever you face any issue while working on github or any other part of the project.
 
+In this Project:
+1. We have done unit Testing using Nightwatch.
+2. We have done api testing.
+3. We have done unit testing.
+
+
 ## How to run test on nightwatch framework?
 1. Navigate into the repo directory using vscode.
 2. Enter this: npx nightwatch tests/FirstTest.js
