@@ -1,5 +1,5 @@
 module.exports = {
-    'sort By Highest Rated Test (Test Case 2)' : function (browser) {
+    'check Highest Rated Option Test (Test Case 5)' : function (browser) {
       const homePage = browser.page.homePage();
       const productPage=browser.page.productPage();
       browser.windowMaximize()
@@ -8,11 +8,11 @@ module.exports = {
         .homePageAndProduct()
       productPage
         .verifyProductPageDisplayed()
-        .checkSortByHighestRated()
+        .checkMenuContainsHighestRatedOption()
       browser
         .end();
     }
   };  
   /*
-This test case checks whether the products are sorted by highest rating or not.
+This test case checks whether the highest Rated Option selected in Sort Dropdown Menu
   */

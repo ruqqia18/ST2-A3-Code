@@ -7,7 +7,8 @@ module.exports = {
         verifyViewCartDisplayed: function() {
           this
             .waitForElementVisible('@heading')
-            .expect.element('@heading').text.to.be.contain('My Cart');
+            .expect.element('@heading').text.to.be.contain('My Cart')
+            this.pause(1000)
           return this;
         }
         ,

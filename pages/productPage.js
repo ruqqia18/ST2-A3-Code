@@ -2,7 +2,8 @@
 module.exports = {
     elements: {
       heading1: 'h1[class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom"]',
-      selectMenu:'#__next > main > div > div.makeStyles-root-119 > div.MuiGrid-root.MuiGrid-container > div:nth-child(4) > button > span.MuiButton-label.RSFActionButton-label-122'
+      selectMenu:'#__next > main > div > div.makeStyles-root-119 > div.MuiGrid-root.MuiGrid-container > div:nth-child(4) > button > span.MuiButton-label.RSFActionButton-label-122',
+      cartButton: 'svg[class="MuiSvgIcon-root RSFCartButton-icon-26"]'
     },
     commands: [
       {
@@ -57,6 +58,13 @@ module.exports = {
           return this
         }
         ,
+        clickOnCartButton: function(){
+            this
+              .waitForElementVisible('@cartButton',1000)
+              .click('@cartButton',1000)
+              .waitForElementPresent('@cartButton',1000)
+        }
+        ,
         checkSortByHighestRated: function(){
             this
               .waitForElementVisible('body', 2000)
@@ -76,6 +84,29 @@ module.exports = {
               .waitForElementVisible('body', 2000)
               .expect.element('@selectMenu').text.to.be.contain('Highest Rated')
             return this     
+        }
+        ,selectOptionHigestRated: function(){
+          this
+            .useXpath()
+            //*[@id="__next"]/main/div/div[2]/div[2]/div[4]/button/span[1]/span[2]
+            .waitForElementVisible("//*[contains(text(),'Sort')]//following-sibling::span")
+            .click('xpath',"//*[contains(text(),'Sort')]", function(result) {
+                this.assert.strictEqual(result.status, 0)
+            })
+            .setValue('//div[4]/child::button/child::span[1]/child::span[2]',"Highest Rated")
+            .useCss()
+            .expect.element('@selectMenu').text.to.be.contain('Highest Rated')
+          return this
+
+        }
+        ,
+        checkMenuContainsHighestRatedOption: function(){
+          this
+          .waitForElementVisible('body', 2000)
+          .waitForElementPresent('@selectMenu')
+          .expect.element('@selectMenu').text.to.be.contain('Highest Rated')
+          this.pause(1000)
+          return this
         }
       }
     ]
