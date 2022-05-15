@@ -8,8 +8,8 @@ module.exports = {
         .homePageAndProduct()
       productPage
         .verifyProductPageDisplayed()
-        //.selectOptionHigestRated()
-        .checkSortByHighestRated()
+        .selectOptionHigestRated()
+        //.checkSortByHighestRated()
       browser
         .end();
     }
