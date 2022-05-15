@@ -5,9 +5,13 @@
 
   <testsuite name="reduceQuantityFromCartTC3"
     errors="0" failures="0" hostname="" id="" package="reduceQuantityFromCartTC3" skipped="0"
-    tests="1" time="35.32" timestamp="">
+    tests="1" time="36.84" timestamp="">
   
-    <testcase name="Reduce Quantity From Cart Test (Test Case 3)" classname="reduceQuantityFromCartTC3" time="35.32" assertions="14">
+    <testcase name="Reduce Quantity From Cart Test (Test Case 3)" classname="reduceQuantityFromCartTC3" time="36.84" assertions="16">
+
+    
+
+    
 
     
 

@@ -1,4 +1,5 @@
 //from selenium.webdriver.common.action_chains import ActionChains
+import useLazyState from 'react-storefront/hooks/useLazyState'
 module.exports = {
     elements: {
       heading1: 'h1[class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom"]',
@@ -93,7 +94,8 @@ module.exports = {
             .click('xpath',"//*[contains(text(),'Sort')]", function(result) {
                 this.assert.strictEqual(result.status, 0)
             })
-            .setValue('//div[4]/child::button/child::span[1]/child::span[2]',"Highest Rated")
+            .waitForElementVisible('//div[7]/child::div[3]/child::ul/child::li[3]')
+            .doubleClick('xpath','//div[7]/child::div[3]/child::ul/child::li[3]')
             .useCss()
             .expect.element('@selectMenu').text.to.be.contain('Highest Rated')
           return this
