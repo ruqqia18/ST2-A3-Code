@@ -10,6 +10,7 @@ module.exports = {
       .verifyAddProductwithoutColor()
       .clickOnCartButton()
       Cartpage
+      .verifyViewCartDisplayed()
       .verifyRemoveProduct()
       browser
         .end();
