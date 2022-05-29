@@ -1,11 +1,14 @@
 module.exports = {
-    'Add Product Without Color (Test Case 2)' : function (browser) {
-      const addProduct = browser.page.newProductPage();
-      
-      addProduct
-        .navigate()
-        .verifyAddProductwithoutColor();
-      browser
-        .end();
-    }
-  };  
+  'Add Product without selection (Test Case 2)' : function (browser) {
+    const Productpage = browser.page.ProductPage();
+    const Homepage = browser.page.homePage();
+    Homepage
+    .navigate()
+    .SelectCategory()
+    Productpage
+    .verifyAddProductwithoutColor()
+    
+    browser
+      .end();
+  }
+};  

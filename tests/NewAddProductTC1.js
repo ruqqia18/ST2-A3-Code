@@ -1,10 +1,14 @@
 module.exports = {
     'Add Product  (Test Case 1)' : function (browser) {
-      const addProduct = browser.page.newProductPage();
+      const Productpage = browser.page.ProductPage();
+      const Homepage = browser.page.homePage();
+      Homepage
+      .navigate()
+      .SelectCategory()
+      Productpage
+      .navigate()
+      .verifyAddProduct()
       
-      addProduct
-        .navigate()
-        .verifyAddProduct();
       browser
         .end();
     }

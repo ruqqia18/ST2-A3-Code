@@ -1,10 +1,16 @@
 module.exports = {
     'Remove Product Confirmation (Test Case 4)' : function (browser) {
-      const removeProduct = browser.page.newCartPage();
-      
-      removeProduct
-        .navigate()
-        .verifyRemoveProductConfirmation();
+      const Productpage = browser.page.ProductPage();
+      const Homepage = browser.page.homePage();
+      const Cartpage=browser.page.CartPage();
+      Homepage
+      .navigate()
+      .SelectCategory()
+      Productpage
+      .verifyAddProductwithoutColor()
+      .clickOnCartButton()
+      Cartpage
+      .verifyRemoveProductConfirmation()
       browser
         .end();
     }
