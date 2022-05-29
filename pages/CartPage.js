@@ -1,22 +1,26 @@
 
 
 module.exports = {
-    url:'http://localhost:3000/s/1',
+    url:'http://localhost:3000',
     
     elements: {
-      removeproduct:'#__next > main > div > div:nth-child(2) > div > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.MuiGrid-grid-sm-8 > div:nth-child(1) > button > span.MuiIconButton-label > svg',
-      confirmremoval:'body > div.MuiDialog-root > div.MuiDialog-container.MuiDialog-scrollPaper > div > div.MuiDialogActions-root.MuiDialogActions-spacing > button:nth-child(1) > span.MuiButton-label',
+      confirmremoval:'span[class="MuiButton-label"]',
       heading: 'h6[class="MuiTypography-root MuiTypography-h6"]',
-      confirmation:'p[class="MuiTypography-root MuiDialogContentText-root MuiTypography-body1 MuiTypography-colorTextSecondary"]'
+      confirmation:'p[class="MuiTypography-root MuiDialogContentText-root MuiTypography-body1 MuiTypography-colorTextSecondary"]',
+      RemoveButton: 'span[class="MuiIconButton-label"]'
          },
     commands: [
       {
         verifyRemoveProduct: function() {
           this
-          .waitForElementVisible('@removeproduct')
-          .click('@removeproduct')
+          .waitForElementPresent('@RemoveButton')
+          this.useXpath()
+          .click('//*[@id="__next"]/main/div/div[2]/div/div[1]/div[1]/button/span[1]')
+          this.useCss()
           .waitForElementVisible('@confirmremoval')
-          .click('@confirmremoval')
+          this.useXpath()
+          .click('/html/body/div[4]/div[3]/div/div[3]/button[1]/span[1]')
+          this.useCss()
           .waitForElementVisible('@heading')
           .expect.element('@heading').text.to.be.contain('My Cart (2 items)');
         return this;
@@ -26,8 +30,14 @@ module.exports = {
 
         verifyRemoveProductConfirmation: function() {
             this
-            .waitForElementVisible('@removeproduct')
-            .click('@removeproduct')
+            .waitForElementPresent('@RemoveButton')
+            this.useXpath()
+            .click('//*[@id="__next"]/main/div/div[2]/div/div[1]/div[1]/button/span[1]')
+            this.useCss()
+            .waitForElementVisible('@confirmremoval')
+            this.useXpath()
+            .click('/html/body/div[4]/div[3]/div/div[3]/button[1]/span[1]')
+            this.useCss()
             .waitForElementVisible('@heading')
             .expect.element('@confirmation').text.to.be.contain('Are you sure that you want to remove selected item?');
           return this;
@@ -42,7 +52,7 @@ module.exports = {
             return this;
           }
           ,
-          
+
           AddQuantitytoCart: function(){
               this
               this.useXpath()

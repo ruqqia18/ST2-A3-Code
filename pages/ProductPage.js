@@ -1,5 +1,5 @@
 module.exports = {
-    url: 'http://localhost:3000/p/1',
+    url: 'http://localhost:3000',
     elements: {
       cartButton: 'svg[class="MuiSvgIcon-root RSFCartButton-icon-26"]',
       heading:'h2[class="MuiTypography-root MuiTypography-h6"]'
